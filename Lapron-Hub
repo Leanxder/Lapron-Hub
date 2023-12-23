@@ -1,0 +1,276 @@
+-- ScreenGui object
+local gui = Instance.new("ScreenGui")
+gui.Name = "CustomLoader"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 180)
+frame.Position = UDim2.new(0.5, -150, 0.9, -280)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.Parent = gui
+
+-- UICorner of the frame
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 10)
+corner.Parent = frame
+
+-- Title 
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(0.99, 0, 0, 60)
+Title.Position = UDim2.new(0.03, 0, 0.10, 0)
+Title.BackgroundColor3 = Color3.new(0, 0, 0)
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 25
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Lapron Hub" -- Change to your script name
+Title.Parent = frame
+
+-- Loading bar frame
+local loadingBarFrame = Instance.new("Frame")
+loadingBarFrame.Size = UDim2.new(0, 0, 0.2, 0)
+loadingBarFrame.Position = UDim2.new(0.02, 0, 0.7, 0)
+loadingBarFrame.BackgroundColor3 = Color3.new(0, 0, 127)
+loadingBarFrame.Parent = frame
+
+-- UICorner of the loading bar frame
+local corner_2 = Instance.new("UICorner")
+corner_2.CornerRadius = UDim.new(0, 6)
+corner_2.Parent = loadingBarFrame
+
+-- Loading text
+local loadingText = Instance.new("TextLabel")
+loadingText.Size = UDim2.new(0.95, 0, 0, 30)
+loadingText.Position = UDim2.new(0.03, 0, 0.7, 0)
+loadingText.BackgroundColor3 = Color3.new(0, 0, 0)
+loadingText.BackgroundTransparency = 1
+loadingText.TextColor3 = Color3.new(1, 1, 1)
+loadingText.TextSize = 18
+loadingText.Font = Enum.Font.SourceSansBold
+loadingText.Text = "Loading..."
+loadingText.Parent = frame
+
+-- Function to animate the loading bar
+function animateLoadingBar()
+    local progress = 0
+
+    while progress < 100 do
+        progress = progress + 1
+        updateProgress(progress)
+        wait(0.2) -- Adjust the animation speed as needed
+    end
+
+    loadingText.Text = "Successfully Loaded"
+  wait(0.5)
+  gui:Destroy()
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Lapron Hub | Key System", LapronTheme)
+
+local Tab = Window:NewTab("Enter Key")
+local Section = Tab:NewSection("Key System")
+Section:NewButton("Get Key", "", function()
+     setclipboard("https://discord.gg/HhmAS4crPu")
+end)
+local enterKey = ""
+
+Section:NewTextBox("Enter Key Here", "", function(txt)
+    enterKey = txt
+end)
+
+Section:NewButton("Submit", "", function()
+    if enterKey == "Lapron999" then
+Library:ToggleUI()
+-- Main
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local LapronTheme = {
+    SchemeColor = Color3.fromRGB(0,0,127),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(0, 0, 0)
+}
+
+local Window = Library.CreateLib("Lapron Hub", LapronTheme)
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 127)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+ 
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+Notification:Notify(
+{Title = "Lapron Hub", Description = "Thanks for Using Lapron Hub!"},
+{OutlineColor = Color3.fromRGB(0,0,127),Time = 5, Type = "image"},
+{Image = "http://www.roblox.com/asset/?id=", ImageColor = Color3.fromRGB(255, 255, 255)
+})
+
+-- Tab
+local Tab1 = Window:NewTab("Home")
+local Tab2 = Window:NewTab("Main Player")
+local Tab3 = Window:NewTab("Combat")
+local Tab4 = Window:NewTab("Fe Scripts")
+local Tab5 = Window:NewTab("Animations")
+local Tab6 = Window:NewTab("Other Scripts")
+local Tab7 = Window:NewTab("Credits")
+
+--Sections
+local Tab1Section = Tab1:NewSection("Home")
+local Tab1Section = Tab1:NewSection("Welcome to Lapron Hub")
+local Tab1Section = Tab1:NewSection("Enjoy the Hub")
+local Tab2Section = Tab2:NewSection("Main Player")
+local Tab3Section = Tab3:NewSection("Combat")
+local Tab4Section = Tab4:NewSection("Fe Scripts")
+local Tab5Section = Tab5:NewSection("Animations")
+local Tab6Section = Tab6:NewSection("Other Scripts")
+local Tab7Section = Tab7:NewSection("Credits")
+local Tab7Section = Tab7:NewSection("Credits - Leanxder#9575")
+local Tab7Section = Tab7:NewSection("Credits - ItsFire")
+local Tab7Section = Tab7:NewSection("Credits - JN HH Gaming")
+local Tab7Section = Tab7:NewSection("Credits - Speacial Thanks to JN HH Gaming")
+
+-- Scripts
+Tab2Section:NewButton("No Clip","Pass through walls",function()
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
+game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+while true do
+		game:GetService("RunService").Stepped:wait()
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+		game.Players.LocalPlayer.Character.Torso.CanCollide = false
+end
+end)
+
+Tab2Section:NewButton("Inf Jumps", "Gives Inf Jump", function()
+local InfiniteJumpEnabled = true
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		if InfiniteJumpEnabled then
+			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+		end
+	end)
+end)
+
+Tab2Section:NewTextBox("Set FOV","Max FOV number 120", function(txt)
+ game.Workspace.CurrentCamera.FieldOfView = txt
+end)
+
+Tab2Section:NewTextBox("Set Jumppower","Increases JP", function(txt)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Tab2Section:NewTextBox("Set Walkspeed","Rare kavo UI walkspeed setter", function(txt) 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Tab2Section:NewButton("tp tool", "click to tp", function()
+ mouse = game.Players.LocalPlayer:GetMouse()
+ tool = Instance.new("Tool")
+ tool.RequiresHandle = false tool.Name = "Tp Tool" tool.Activated:connect(function() 
+local pos = mouse.Hit+Vector3.new(0,2.5,0) 
+pos = CFrame.new(pos.X,pos.Y,pos.Z) 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos end) 
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Tab3Section:NewButton("Hitbox Expander","Expands Hitbox",function()
+_G.HeadSize = 25
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really Black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab4Section:NewButton("FE Illusion","Illusion",function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+end)
+
+Tab5Section:NewButton("Ninja Animation","Plays Ninja Animation",function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/bwGLPVV7",true))()
+end)
+
+Tab5Section:NewButton("Zombie Animation" , "Plays Zombie Animation",function()
+print("Clicked")
+end)
+
+Tab6Section:NewButton("Bedwars VapeV4", "vape v4", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Tab6Section:NewButton("Door", "Idk", function()
+   loadstring(game:HttpGetAsync("https://pastebin.com/raw/R8QMbhzv"))() 
+end)
+
+Tab6Section:NewButton("Brookhaven", "ice hub", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end) 
+
+Tab6Section:NewButton("pet sim x", "ptw", function() 
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/DeezScripts/PsxStScripts69/main/scripts/sign/petchanger/unallhoverboards"))();
+end)
+
+Tab6Section:NewButton("gigahub", "other hub", function() loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Version%20V3.5'))()
+end)
+
+Tab6Section:NewButton("Pissware", "Load Another Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnAvaragelilmemer/Pissware/main/Main/MobileMain.lua"))()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Skipstage"):FireServer(unpack(args))
+end)
+    else
+    
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+Notification:Notify(
+{Title = "Lapron Hub", Description = "Incorrect Key!"},
+{OutlineColor = Color3.fromRGB(0,0,127),Time = 5, Type = "image"},
+{Image = "http://www.roblox.com/asset/?id=", ImageColor = Color3.fromRGB(255, 255, 255)
+})
+    end
+	end)
+end
+
+-- Function to update the loading progress
+function updateProgress(progress)
+    loadingBarFrame.Size = UDim2.new(progress / 105, 0, 0.2, 0)
+    loadingText.Text = "Loading: " .. progress .. "%"
+end
+
+-- Start the loading animation
+spawn(animateLoadingBar)
